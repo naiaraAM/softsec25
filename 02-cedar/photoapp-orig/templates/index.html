@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Photo App{% endblock %}
+
+{% block content %}
+<h2 class="mb-4">Public Images</h2>
+<div class="row">
+    {% for image in images %}
+    <div class="col-md-4 image-container">
+        <div class="card">
+            {% if image.is_explicit %}
+            <div class="card-header bg-warning">
+                <strong>⚠️ Explicit Content Warning</strong>
+            </div>
+            {% endif %}
+            <img src="{{ url_for('serve_image', filename=image.filename) }}" class="card-img-top" alt="Public image">
+            <div class="card-body">
+                <p class="card-text">
+                    Uploaded by: <a href="{{ url_for('user_public_images', username=image.user.username) }}">{{ image.user.username }}</a><br>
+                    Date: {{ image.upload_date.strftime('%Y-%m-%d %H:%M:%S') }}<br>
+                    Content: {% if image.is_explicit %}Explicit{% else %}Safe{% endif %}
+                </p>
+                {% if current_user.can_delete_image(image) %}
+                <a href="{{ url_for('delete_image', image_id=image.id) }}" class="btn btn-danger"
+                   onclick="return confirm('Are you sure you want to delete this image?')">
+                    Delete
+                </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <div class="col-12">
+        <p>No public images available.</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %} 
