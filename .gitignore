@@ -1,0 +1,28 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# latex
+*.aux
+*.bbl
+*.blg
+*.dvi
+*.log
+*.out
+*.pdf
+*.toc
+
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.pdb
+*.egg
+*.egg-info/
+dist/
+build/
+instance/
+uploads/
+*.egg-info/
