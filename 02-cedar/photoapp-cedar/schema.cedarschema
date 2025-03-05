@@ -1,0 +1,19 @@
+entity User in Group = {
+    "isMinor": Bool
+};
+
+entity Group in Group ;
+
+entity Photo = {
+    "isPublic": Bool,
+    "isExplicit": Bool,
+    "owner": User,
+};
+
+action "view", "delete", "toggle" appliesTo {
+    principal: User,
+    resource: Photo,
+    context: {
+        "authenticated": Bool,
+    }
+};
