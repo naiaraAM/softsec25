@@ -4,7 +4,7 @@ This repository contains a series of exercises from [the Cedar Policy tutorial](
 
 ## Exercises
 
-1. **[Discretionary Access Control](01-discreatioanry)**
+1. **[Discretionary Access Control](01-discretionary)**
    - Basic permission management
    - Granting and revoking access
    - Testing with `pytest 01-discretionary/`
