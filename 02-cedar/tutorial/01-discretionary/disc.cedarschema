@@ -1,5 +1,5 @@
-entity Photo  = { "explicit": Bool };
-entity User = {"age": Long, "name": String};
+entity Photo;
+entity User;
 
 action "update", "view", "delete" appliesTo {
   principal: User,
