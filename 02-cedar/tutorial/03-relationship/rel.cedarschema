@@ -1,0 +1,13 @@
+entity Photo {
+  dept: String,
+  owner: String
+};
+entity User {
+  id: String,
+  dept: String
+};
+action "view", "edit", "delete" appliesTo {
+  principal: [User],
+  resource: [Photo],
+  context: {}
+};

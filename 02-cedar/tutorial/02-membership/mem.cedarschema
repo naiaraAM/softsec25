@@ -1,0 +1,9 @@
+entity Photo;
+entity User in Role;
+entity Role in Role;
+action "view" appliesTo {
+  principal: [User],
+  resource: [Photo],
+  context: {}
+};
+
