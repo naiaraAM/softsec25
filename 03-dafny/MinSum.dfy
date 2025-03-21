@@ -9,7 +9,7 @@ function sum(a: seq<int>): int
 }
 
 method MinSum(a: seq<int>) returns (s: int)
-requires 0 < |a|;
+requires 0 < |a|
 ensures forall i,j :: 0 <= i < j <= |a| ==> s <= sum(a[i..j])
 {
   var k := 1;
