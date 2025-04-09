@@ -9,3 +9,9 @@ permit(
   action == Action::"view",
   resource == Photo::"juniorPhotographerPhoto.jpg"
 );
+
+permit(
+    principal in Role::"PhotographyJudge",
+    action == Action::"view",
+    resource == Photo::"genericPhoto.jpg"
+);

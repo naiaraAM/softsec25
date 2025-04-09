@@ -23,3 +23,7 @@ def test_eve_access():
 def test_group_parents():
     assert checkAccess("Alice", "view", "genericPhoto.jpg") == Decision.Allow  # Through PhotographyJudge parent role
     assert checkAccess("Bob", "view", "genericPhoto.jpg") == Decision.Allow  # Through PhotographyJudge parent role
+
+test_alice_and_bob()
+test_eve_access()
+test_group_parents()

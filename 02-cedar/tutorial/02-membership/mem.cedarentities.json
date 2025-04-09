@@ -29,6 +29,19 @@
             }
         ]
     },
+    {
+        "uid": {
+            "type": "User",
+            "id": "Eve"
+        },
+        "attrs": {},
+        "parents": [
+            {
+                "type": "Role",
+                "id": "PhotographyJudge"
+            }
+        ]
+    },
 
     {
         "uid": {
@@ -36,12 +49,30 @@
             "id": "vacationPhotoJudges"
         },
         "attrs": {},
-        "parents": [ ]
+        "parents": [
+            {
+                "type": "Role",
+                "id": "PhotographyJudge"
+            }
+        ]
     },
     {
         "uid": {
             "type": "Role",
             "id": "juniorPhotographerJudges"
+        },
+        "attrs": {},
+        "parents": [
+            {
+                "type": "Role",
+                "id": "PhotographyJudge"
+            }
+        ]
+    },
+    {
+        "uid": {
+            "type": "Role",
+            "id": "PhotographyJudge"
         },
         "attrs": {},
         "parents": [ ]

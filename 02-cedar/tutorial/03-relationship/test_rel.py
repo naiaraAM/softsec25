@@ -24,3 +24,7 @@ def test_department_based_access():
     assert checkAccess("bob", "view", "VacationPhoto94.jpg") == Decision.Deny
     assert checkAccess("bob", "edit", "VacationPhoto94.jpg") == Decision.Deny
     assert checkAccess("bob", "delete", "VacationPhoto94.jpg") == Decision.Deny 
+    
+    
+test_owner_based_access()
+test_department_based_access()

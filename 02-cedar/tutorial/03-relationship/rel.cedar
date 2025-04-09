@@ -4,5 +4,5 @@ permit(
   resource 
 )
 when {
-  resource.owner == principal.id
+  resource.owner == principal.id || resource.dept == principal.dept
 };

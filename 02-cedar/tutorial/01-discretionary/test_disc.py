@@ -19,3 +19,7 @@ def test_add_view_delete_permissions_for_alice():
     assert accessPhoto("bob", "VacationPhoto94.jpg", "update") == Decision.Deny
     assert accessPhoto("bob", "VacationPhoto94.jpg", "view") == Decision.Deny
     assert accessPhoto("bob", "VacationPhoto94.jpg", "delete") == Decision.Deny 
+    
+test_initial_permissions()
+test_add_bob_permissions()
+test_add_view_delete_permissions_for_alice()
